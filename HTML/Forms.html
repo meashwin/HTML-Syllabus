@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+
+    <!--
+        <meta> tag is used to write small information of webpage.
+
+        Attribute:
+        charset="UTF-8"
+             Character set of Uniform Transformation format with 8 bit of size
+        <meta http-equiv"X-UA-Compatible" content="TE=edge">
+            Browser will compatiable with Internet Explorer Edge
+        <meta http-equiv="Refresh" content="5">
+                Reloading Webpage every 5 seconds
+    -->
+
+
+</head>
+<body>
+    <h1>Forms</h1>
+
+    <!--
+        Form: It is used to collect the data from the enduser directly from  the webpage
+
+        -> Using <input> tag we are creating a input field
+        -> <input> tag is Unpaired and Inline level tag
+        -> Inside the <form> tag we are inserting theb <input> tag
+        -> <label> tag is used to give label name for the input field
+    -->
+
+    <form method="post" action="">
+        <fieldset>
+            <legend align="center">Basic Details</legend>
+        <label for="">Name: <sup>*</sup></label>
+        <input type="text" name="fnm" placeholder="Enter First Name" required>
+        <input type="text" name="snm" id="" placeholder="Enter Second Name">
+        <br><br>
+        <label for="">Email:</label>
+        <input type="email" name="mail" placeholder="Enter Your Email">
+        <br><br>
+        <label for=""> Password: <sup>*</sup></label>
+        <input type="password" name="pswd" placeholder="Enter a new Password" required>
+        <br><br>
+    </fieldset>
+        <label for="">Age:</label>
+        <input type="number" name="age" min="0" max="100" placeholder="Age">
+        <br><br>
+        <label for="">Date:</label>
+        <input type="date" name="dob" placeholder="Date Of Birth">
+        <br><br>
+        <label for="">Time:</label>
+        <input type="time" name="time">
+        <br><br>
+        <label for="">Gender</label>
+        <input type="radio" name="gen" value="male" id="m">
+        <label for="m">Male</label>
+
+        <input type="radio" name="gen" value="female" id="f">
+        <label for="f">Female</label>
+
+        <input type="radio" name="gen" value="others" id="o">
+        <label for="o">Others</label>
+        <br><br>
+
+        <label for="">Language</label>
+        <input type="checkbox" name="lang" value="eng">
+        <label for="">English</label>
+
+        <input type="checkbox" name="lang" value="kan"> 
+        <label for="">Kannada</label>
+
+        <input type="checkbox" name="lang" value="tam">
+        <label for="">Tamil</label>
+        <br><br>
+
+        <label for="">Places:</label>
+        <select name="plc" id="">
+            <option value="">Bangalore</option>
+            <option value="">KGF</option>
+            <option value="">Mysore</option>
+            <option value="">Goa</option>
+            <option value="">Maldives</option>
+        </select>
+        <br><br>
+
+        <label for="">Comment Box:</label>
+        
+        <textarea name="cmnt" cols="50" rows="1" placeholder="Type your Comment"></textarea>
+        <br><br>
+
+        <label for="">Range:</label>
+        <input type="range" name="rng" id="">
+        <br><br>
+        <label for="">Click to Upload Your File</label>
+        <input type="file" name="file">
+        
+        <br><br><br>
+        <input type="reset">
+        <input type="submit" value="Register">
+       
+
+
+        <!--
+            Attributes:
+            -> type attribute is used to change the type of input field
+            -> name attribute is used to send the data to the backend
+                   NOTE: Without using the name attribute we can't send data to the backend
+            -> value attribute is used to change the value of input fiels
+            -> placeholder attribute is used to give reference message for enduser
+
+            -> min attribute is used to insert minimum values & max attribute is used to insert maximum value
+            -> required attribute is used to make mandatory fields
+
+            -> checked attribute is used to select default option in radio & checkbox fiels
+            -> selected attribute is used for select default option in select tag
+            -> disabled attribute is used for disable the field (we can't perform any operation)
+
+            -> <select> tag is used to create dropdown on webpage
+            -> Using <option> tag we are inserting the data for dropdown option
+            -> <textarea> tag is used to create comment box on webpage
+            -> <fieldset> tag is used tp group the related information
+            -> <legend> tag is used to give name for the fieldset tag
+
+            -> method="get/post"
+               It is used to send data to the backend
+               - When we are using method="get" at the time data will sent to the backend but data will be visible in the URL(same as default)
+               - When we are using method="post" at the time data will sent to backend but data will not be visible in URL. 
+
+        -->
+    </form>
+</body>
+</html>
